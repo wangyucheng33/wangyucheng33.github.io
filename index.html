@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Yucheng Wang is a foundation model researcher at StepFun, working on post-training, agentic models, and reliable language generation.">
-  <meta name="theme-color" content="#173d36">
+  <meta name="theme-color" content="#ffffff">
   <title>Yucheng Wang | Foundation Model Researcher</title>
   <style>
     :root { --ink:#17211f; --muted:#5d6965; --paper:#fff; --wash:#f4f7f5; --forest:#173d36; --rust:#a54b35; --gold:#c99a40; --line:#dce4e0; --max-width:1080px; }
@@ -85,14 +85,490 @@
     }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
   </style>
+  <style>
+    :root {
+      --ink: #222;
+      --muted: #666;
+      --paper: #fff;
+      --wash: #fff;
+      --forest: #222;
+      --rust: #555;
+      --gold: #777;
+      --line: #e5e5e5;
+      --max-width: 880px;
+    }
+
+    body {
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #245a8d;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: #163d63;
+      text-decoration: underline;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .nav {
+      width: min(calc(100% - 40px), var(--max-width));
+      min-height: 52px;
+      gap: 24px;
+    }
+
+    .wordmark {
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      gap: 20px;
+      color: #555;
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      padding-left: 14px;
+      border-left: 1px solid var(--line);
+    }
+
+    .lang-switch button {
+      padding: 2px 5px;
+      border: 0;
+      color: #777;
+      background: transparent;
+      font: inherit;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .lang-switch button[aria-pressed="true"] {
+      color: #222;
+      font-weight: 600;
+    }
+
+    main {
+      overflow: visible;
+    }
+
+    .hero {
+      border-bottom: 0;
+      background: #fff;
+    }
+
+    .hero-inner {
+      width: min(calc(100% - 40px), var(--max-width));
+      min-height: 0;
+      padding: 48px 0 34px;
+      grid-template-columns: minmax(0, 1fr) 128px;
+      align-items: start;
+      gap: 48px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      display: none;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .intro {
+      max-width: 660px;
+      margin-bottom: 14px;
+      color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .profile-links {
+      gap: 8px 16px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .profile-links a {
+      border-bottom: 0;
+      text-decoration: none;
+    }
+
+    .profile-panel {
+      align-self: start;
+      padding: 0;
+      border: 0;
+      display: block;
+    }
+
+    .avatar {
+      width: 112px;
+      height: 112px;
+      margin: 0;
+      border: 1px solid #ddd;
+      border-radius: 2px;
+    }
+
+    .profile-panel dl {
+      display: none;
+    }
+
+    .section {
+      width: min(calc(100% - 40px), var(--max-width));
+      padding: 30px 0 4px;
+      display: block;
+    }
+
+    .section + .section {
+      border-top: 0;
+    }
+
+    .section-label {
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-label::before {
+      display: none;
+    }
+
+    .section-label h2 {
+      margin: 0 0 7px;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .about-copy {
+      max-width: none;
+      margin-bottom: 12px;
+      color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      margin-top: 0;
+      border: 0;
+    }
+
+    .interest {
+      padding: 0;
+      border: 0;
+      color: #555;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .interest::before {
+      content: "• ";
+      color: #999;
+    }
+
+    .publication-list,
+    .timeline,
+    .honors {
+      border-top: 0;
+    }
+
+    .publication {
+      grid-template-columns: 86px minmax(0, 1fr);
+      gap: 14px;
+      padding: 10px 0 12px;
+      border-bottom: 0;
+    }
+
+    .venue {
+      padding-top: 3px;
+      color: #777;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.45;
+      text-transform: none;
+    }
+
+    .publication h3 {
+      margin-bottom: 2px;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .publication h3 a {
+      color: var(--ink);
+    }
+
+    .publication h3 a:hover {
+      color: #245a8d;
+    }
+
+    .authors {
+      color: #666;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .me {
+      color: #333;
+      font-weight: 600;
+    }
+
+    .publication-link {
+      margin-top: 3px;
+      color: #245a8d;
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: none;
+    }
+
+    .detail {
+      max-width: none;
+      margin: 3px 0 0;
+      color: #666;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .timeline-item {
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 14px;
+      padding: 8px 0 10px;
+      border-bottom: 0;
+    }
+
+    .timeline-year {
+      padding-top: 2px;
+      color: #777;
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 0;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .timeline-item p {
+      color: #666;
+      font-size: 13px;
+    }
+
+    .honors {
+      display: block;
+    }
+
+    .honor {
+      display: grid;
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 14px;
+      padding: 6px 0;
+      border-bottom: 0;
+    }
+
+    .honor-year {
+      grid-row: 1 / span 2;
+      margin: 0;
+      padding-top: 2px;
+      color: #777;
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    .honor strong {
+      display: inline;
+      grid-column: 2;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .honor span:last-child {
+      grid-column: 2;
+      color: #777;
+      font-size: 13px;
+    }
+
+    .honor span:last-child::before {
+      content: " — ";
+    }
+
+    .contact {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin: 0 auto;
+      padding: 30px 0 28px;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    .contact-inner {
+      width: 100%;
+      display: block;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+
+    .contact h2 {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .contact p {
+      margin-bottom: 4px;
+      color: #555;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    .contact a {
+      color: #245a8d;
+    }
+
+    footer {
+      padding: 16px 20px 24px;
+      color: #888;
+      background: #fff;
+      font-size: 12px;
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        min-height: 48px;
+      }
+
+      .nav-links li:not(:first-child) {
+        display: none;
+      }
+
+      .nav-actions {
+        gap: 12px;
+      }
+
+      .lang-switch {
+        padding-left: 10px;
+      }
+
+      .hero-inner {
+        padding: 30px 0 26px;
+        grid-template-columns: minmax(0, 1fr) 76px;
+        gap: 20px;
+      }
+
+      h1 {
+        font-size: 29px;
+      }
+
+      .intro {
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      .profile-panel {
+        padding: 2px 0 0;
+        border: 0;
+        display: block;
+      }
+
+      .avatar {
+        width: 76px;
+        height: 76px;
+      }
+
+      .section {
+        padding: 26px 0 2px;
+      }
+
+      .about-copy {
+        font-size: 15px;
+      }
+
+      .publication {
+        grid-template-columns: 1fr;
+        gap: 1px;
+        padding: 9px 0 11px;
+      }
+
+      .timeline-item,
+      .honor {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .honor strong,
+      .honor span:last-child {
+        grid-column: 1;
+      }
+
+      .honor-year {
+        grid-row: auto;
+      }
+
+      .honor span:last-child::before {
+        content: " — ";
+      }
+
+      .contact {
+        padding: 28px 0 24px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Primary navigation">
-      <a class="wordmark" href="#top">Yucheng Wang</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li><li><a href="#publications">Research</a></li><li><a href="#models">Models</a></li><li><a href="#experience">Experience</a></li><li><a href="#writing">Writing</a></li>
-      </ul>
+      <a class="wordmark" href="#top" data-i18n="name">Yucheng Wang</a>
+      <div class="nav-actions">
+        <ul class="nav-links">
+          <li><a href="#about" data-i18n="navAbout">About</a></li><li><a href="#publications" data-i18n="navResearch">Research</a></li><li><a href="#models" data-i18n="navModels">Models</a></li><li><a href="#experience" data-i18n="navExperience">Experience</a></li><li><a href="#writing" data-i18n="navWriting">Writing</a></li>
+        </ul>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        </div>
+      </div>
     </nav>
   </header>
   <main id="top">
@@ -100,13 +576,13 @@
       <div class="hero-inner">
         <div>
           <p class="eyebrow">Foundation Model Researcher</p>
-          <h1 id="page-title">Yucheng Wang</h1>
-          <p class="intro">I work on post-training foundation models for agentic capabilities, with a broader interest in how language models acquire, use, and communicate knowledge.</p>
+          <h1 id="page-title" data-i18n="name">Yucheng Wang</h1>
+          <p class="intro" data-i18n="intro">I work on post-training foundation models for agentic capabilities, with a broader interest in how language models acquire, use, and communicate knowledge.</p>
           <div class="profile-links" aria-label="Profile links">
             <a href="https://openreview.net/profile?id=~Yucheng_Wang12" target="_blank" rel="noreferrer">OpenReview</a>
             <a href="https://github.com/wangyucheng33" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://dblp.org/search?q=Yucheng%20Wang" target="_blank" rel="noreferrer">DBLP</a>
-            <a href="mailto:2891959768@qq.com">Email</a>
+            <a href="mailto:2891959768@qq.com" data-i18n="email">Email</a>
           </div>
         </div>
         <aside class="profile-panel" aria-label="Profile summary">
@@ -116,14 +592,14 @@
       </div>
     </section>
     <section class="section" id="about" aria-labelledby="about-title">
-      <div class="section-label"><h2 id="about-title">About</h2></div>
+      <div class="section-label"><h2 id="about-title" data-i18n="aboutTitle">About</h2></div>
       <div>
-        <p class="about-copy">I am a foundation model researcher at StepFun, where I focus on post-training for agentic models. Previously, I worked on the ERNIE team at Baidu and at ByteDance AI Lab. My research spans agentic language models, reinforcement learning, retrieval-augmented generation, and reliable long-form generation. I studied Mathematics at Fudan University and also write science fiction.</p>
-        <div class="interests" aria-label="Research interests"><div class="interest">Foundation Model Post-training</div><div class="interest">Agentic Language Models</div><div class="interest">Retrieval-Augmented Generation</div><div class="interest">Reinforcement Learning &amp; Factuality</div></div>
+        <p class="about-copy" data-i18n="aboutText">I am a foundation model researcher at StepFun, where I focus on post-training for agentic models. Previously, I worked on the ERNIE team at Baidu and at ByteDance AI Lab. My research spans agentic language models, reinforcement learning, retrieval-augmented generation, and reliable long-form generation. I studied Mathematics at Fudan University and also write science fiction.</p>
+        <div class="interests" aria-label="Research interests"><div class="interest" data-i18n="interestPostTraining">Foundation Model Post-training</div><div class="interest" data-i18n="interestAgents">Agentic Language Models</div><div class="interest" data-i18n="interestRag">Retrieval-Augmented Generation</div><div class="interest" data-i18n="interestRl">Reinforcement Learning &amp; Factuality</div></div>
       </div>
     </section>
     <section class="section" id="publications" aria-labelledby="publications-title">
-      <div class="section-label"><h2 id="publications-title">Selected Publications</h2></div>
+      <div class="section-label"><h2 id="publications-title" data-i18n="publicationsTitle">Selected Publications</h2></div>
       <div class="publication-list">
         <article class="publication"><div class="venue">ACL<br>2026</div><div><h3><a href="https://openreview.net/profile?id=~Yucheng_Wang12" target="_blank" rel="noreferrer">Reinforced Informativeness Optimization for Long-Form Retrieval-Augmented Generation</a></h3><p class="authors">Yuhao Wang, Ruiyang Ren, <span class="me">Yucheng Wang</span>, Xin Zhao, Jing Liu, Hua Wu, Haifeng Wang</p><a class="publication-link" href="https://openreview.net/profile?id=~Yucheng_Wang12" target="_blank" rel="noreferrer">OpenReview</a></div></article>
         <article class="publication"><div class="venue">NeurIPS<br>2026</div><div><h3><a href="https://openreview.net/profile?id=~Yucheng_Wang12" target="_blank" rel="noreferrer">Knowledge-Level Consistency Reinforcement Learning: Dual-Fact Alignment for Long-Form Factuality</a></h3><p class="authors">Junliang Li, <span class="me">Yucheng Wang</span>, Yan Chen, Yu Ran, Ruiqing Zhang, Jing Liu, Hua Wu, Haifeng Wang</p><a class="publication-link" href="https://openreview.net/profile?id=~Yucheng_Wang12" target="_blank" rel="noreferrer">OpenReview</a></div></article>
@@ -135,41 +611,183 @@
       </div>
     </section>
     <section class="section" id="models" aria-labelledby="models-title">
-      <div class="section-label"><h2 id="models-title">Model Work</h2></div>
+      <div class="section-label"><h2 id="models-title" data-i18n="modelsTitle">Model Work</h2></div>
       <div class="publication-list">
-        <article class="publication"><div class="venue">StepFun<br>2026</div><div><h3><a href="https://github.com/stepfun-ai/Step-5-Preview" target="_blank" rel="noreferrer">Step-5-Preview</a></h3><p class="authors">StepFun · Model contributor</p><p class="detail">A flagship foundation model for agentic work, long-horizon tool use, software engineering, and professional knowledge tasks.</p><a class="publication-link" href="https://github.com/stepfun-ai/Step-5-Preview" target="_blank" rel="noreferrer">Project</a></div></article>
-        <article class="publication"><div class="venue">ERNIE<br>2026</div><div><h3><a href="https://arxiv.org/abs/2602.04705" target="_blank" rel="noreferrer">ERNIE 5.0 Technical Report</a></h3><p class="authors">ERNIE Team, Baidu · Contributing author</p><p class="detail">A unified autoregressive foundation model for multimodal understanding and generation across text, image, video, and audio.</p><a class="publication-link" href="https://arxiv.org/abs/2602.04705" target="_blank" rel="noreferrer">arXiv</a></div></article>
-        <article class="publication"><div class="venue">ERNIE<br>2025</div><div><h3><a href="https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf" target="_blank" rel="noreferrer">ERNIE 4.5 Technical Report</a></h3><p class="authors">ERNIE Team, Baidu · Contributor</p><p class="detail">An open-source family of large-scale language and multimodal foundation models with dense and mixture-of-experts variants.</p><a class="publication-link" href="https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf" target="_blank" rel="noreferrer">Report</a></div></article>
+        <article class="publication"><div class="venue">StepFun<br>2026</div><div><h3><a href="https://github.com/stepfun-ai/Step-5-Preview" target="_blank" rel="noreferrer">Step-5-Preview</a></h3><p class="authors" data-i18n="stepRole">StepFun · Model contributor</p><p class="detail" data-i18n="stepDetail">A flagship foundation model for agentic work, long-horizon tool use, software engineering, and professional knowledge tasks.</p><a class="publication-link" href="https://github.com/stepfun-ai/Step-5-Preview" target="_blank" rel="noreferrer" data-i18n="project">Project</a></div></article>
+        <article class="publication"><div class="venue">ERNIE<br>2026</div><div><h3><a href="https://arxiv.org/abs/2602.04705" target="_blank" rel="noreferrer">ERNIE 5.0 Technical Report</a></h3><p class="authors" data-i18n="ernie5Role">ERNIE Team, Baidu · Contributing author</p><p class="detail" data-i18n="ernie5Detail">A unified autoregressive foundation model for multimodal understanding and generation across text, image, video, and audio.</p><a class="publication-link" href="https://arxiv.org/abs/2602.04705" target="_blank" rel="noreferrer">arXiv</a></div></article>
+        <article class="publication"><div class="venue">ERNIE<br>2025</div><div><h3><a href="https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf" target="_blank" rel="noreferrer">ERNIE 4.5 Technical Report</a></h3><p class="authors" data-i18n="ernie45Role">ERNIE Team, Baidu · Contributor</p><p class="detail" data-i18n="ernie45Detail">An open-source family of large-scale language and multimodal foundation models with dense and mixture-of-experts variants.</p><a class="publication-link" href="https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf" target="_blank" rel="noreferrer" data-i18n="report">Report</a></div></article>
       </div>
     </section>
     <section class="section" id="experience" aria-labelledby="experience-title">
-      <div class="section-label"><h2 id="experience-title">Experience &amp; Education</h2></div>
+      <div class="section-label"><h2 id="experience-title" data-i18n="experienceTitle">Experience &amp; Education</h2></div>
       <div class="timeline">
-        <article class="timeline-item"><div class="timeline-year">2026 - Present</div><div><h3>Foundation Model Researcher</h3><p>Post-training for agentic models, StepFun</p></div></article>
-        <article class="timeline-item"><div class="timeline-year">2023 - 2026</div><div><h3>Researcher</h3><p>ERNIE Team, Baidu</p></div></article>
-        <article class="timeline-item"><div class="timeline-year">2020 - 2022</div><div><h3>Researcher</h3><p>AI Lab, ByteDance Inc.</p></div></article>
-        <article class="timeline-item"><div class="timeline-year">2015 - 2020</div><div><h3>Undergraduate in Mathematics</h3><p>Class of 2015, Fudan University</p></div></article>
+        <article class="timeline-item"><div class="timeline-year" data-i18n="presentYears">2026 - Present</div><div><h3 data-i18n="stepJob">Foundation Model Researcher</h3><p data-i18n="stepJobDetail">Post-training for agentic models, StepFun</p></div></article>
+        <article class="timeline-item"><div class="timeline-year">2023 - 2026</div><div><h3 data-i18n="researcher">Researcher</h3><p data-i18n="baiduJobDetail">ERNIE Team, Baidu</p></div></article>
+        <article class="timeline-item"><div class="timeline-year">2020 - 2022</div><div><h3 data-i18n="researcher">Researcher</h3><p data-i18n="byteDanceJobDetail">AI Lab, ByteDance Inc.</p></div></article>
+        <article class="timeline-item"><div class="timeline-year">2015 - 2020</div><div><h3 data-i18n="undergraduate">Undergraduate in Mathematics</h3><p data-i18n="fudanDetail">Class of 2015, Fudan University</p></div></article>
       </div>
     </section>
     <section class="section" id="honors" aria-labelledby="honors-title">
-      <div class="section-label"><h2 id="honors-title">Honors</h2></div>
+      <div class="section-label"><h2 id="honors-title" data-i18n="honorsTitle">Honors</h2></div>
       <div class="honors">
-        <article class="honor"><span class="honor-year">2019</span><strong>Junzheng Scholar (莙政学者)</strong><span>Fudan University</span></article>
-        <article class="honor"><span class="honor-year">Undergraduate</span><strong>Xiyuan Scholar (曦源学者)</strong><span>Fudan University</span></article>
-        <article class="honor"><span class="honor-year">2016</span><strong>National Scholarship</strong><span>Ministry of Education, China</span></article>
-        <article class="honor"><span class="honor-year">2014</span><strong>NOI Silver Medal</strong><span>National Olympiad in Informatics</span></article>
-        <article class="honor"><span class="honor-year">2014</span><strong>APIO Silver Medal</strong><span>Asia-Pacific Informatics Olympiad, China Region</span></article>
+        <article class="honor"><span class="honor-year">2019</span><strong data-i18n="junzheng">Junzheng Scholar (莙政学者)</strong><span data-i18n="fudan">Fudan University</span></article>
+        <article class="honor"><span class="honor-year" data-i18n="undergradPeriod">Undergraduate</span><strong data-i18n="xiyuan">Xiyuan Scholar (曦源学者)</strong><span data-i18n="fudan">Fudan University</span></article>
+        <article class="honor"><span class="honor-year">2016</span><strong data-i18n="nationalScholarship">National Scholarship</strong><span data-i18n="ministry">Ministry of Education, China</span></article>
+        <article class="honor"><span class="honor-year">2014</span><strong data-i18n="noi">NOI Silver Medal</strong><span data-i18n="noiFull">National Olympiad in Informatics</span></article>
+        <article class="honor"><span class="honor-year">2014</span><strong data-i18n="apio">APIO Silver Medal</strong><span data-i18n="apioFull">Asia-Pacific Informatics Olympiad, China Region</span></article>
       </div>
     </section>
     <section class="section" id="writing" aria-labelledby="writing-title">
-      <div class="section-label"><h2 id="writing-title">Science Fiction</h2></div>
+      <div class="section-label"><h2 id="writing-title" data-i18n="writingTitle">Science Fiction</h2></div>
       <div class="publication-list">
-        <article class="publication"><div class="venue">Fiction<br>2018</div><div><h3 lang="zh-CN"><a href="https://csfdb.cn/books/4791" target="_blank" rel="noreferrer">《大碰撞，野蛮人》</a></h3><p class="detail">Published March 1, 2018 by Jiangsu Phoenix Literature and Art Publishing House in <span lang="zh-CN">《科幻故事空间站》</span>.</p><a class="publication-link" href="https://csfdb.cn/books/4791" target="_blank" rel="noreferrer">CSFDB</a></div></article>
-        <article class="publication"><div class="venue">Fiction</div><div><h3 lang="zh-CN"><a href="https://csfdb.cn/books/1799" target="_blank" rel="noreferrer">《北方》</a></h3><p class="detail">Science fiction published during my undergraduate years.</p><a class="publication-link" href="https://csfdb.cn/books/1799" target="_blank" rel="noreferrer">CSFDB</a></div></article>
+        <article class="publication"><div class="venue" data-i18n="fiction2018">Fiction<br>2018</div><div><h3 lang="zh-CN"><a href="https://csfdb.cn/books/4791" target="_blank" rel="noreferrer">《大碰撞，野蛮人》</a></h3><p class="detail" data-i18n="collisionDetail">Published March 1, 2018 by Jiangsu Phoenix Literature and Art Publishing House in 《科幻故事空间站》.</p><a class="publication-link" href="https://csfdb.cn/books/4791" target="_blank" rel="noreferrer">CSFDB</a></div></article>
+        <article class="publication"><div class="venue" data-i18n="fiction">Fiction</div><div><h3 lang="zh-CN"><a href="https://csfdb.cn/books/1799" target="_blank" rel="noreferrer">《北方》</a></h3><p class="detail" data-i18n="northDetail">Science fiction published during my undergraduate years.</p><a class="publication-link" href="https://csfdb.cn/books/1799" target="_blank" rel="noreferrer">CSFDB</a></div></article>
       </div>
     </section>
-    <section class="contact" id="contact" aria-labelledby="contact-title"><div class="contact-inner"><h2 id="contact-title">Contact</h2><div><p>For research discussions and collaboration, feel free to get in touch.</p><a href="mailto:2891959768@qq.com">2891959768@qq.com</a></div></div></section>
+    <section class="contact" id="contact" aria-labelledby="contact-title"><div class="contact-inner"><h2 id="contact-title" data-i18n="contactTitle">Contact</h2><div><p data-i18n="contactText">For research discussions and collaboration, feel free to get in touch.</p><a href="mailto:2891959768@qq.com">2891959768@qq.com</a></div></div></section>
   </main>
-  <footer><span>&copy; 2026 Yucheng Wang</span></footer>
+  <footer><span>&copy; 2026 <span data-i18n="name">Yucheng Wang</span></span></footer>
+  <script>
+    const translations = {
+      en: {
+        pageTitle: "Yucheng Wang | Foundation Model Researcher",
+        description: "Yucheng Wang is a foundation model researcher at StepFun, working on post-training, agentic models, and reliable language generation.",
+        name: "Yucheng Wang",
+        navAbout: "About",
+        navResearch: "Research",
+        navModels: "Models",
+        navExperience: "Experience",
+        navWriting: "Writing",
+        intro: "I work on post-training foundation models for agentic capabilities, with a broader interest in how language models acquire, use, and communicate knowledge.",
+        email: "Email",
+        aboutTitle: "About",
+        aboutText: "I am a foundation model researcher at StepFun, where I focus on post-training for agentic models. Previously, I worked on the ERNIE team at Baidu and at ByteDance AI Lab. My research spans agentic language models, reinforcement learning, retrieval-augmented generation, and reliable long-form generation. I studied Mathematics at Fudan University and also write science fiction.",
+        interestPostTraining: "Foundation Model Post-training",
+        interestAgents: "Agentic Language Models",
+        interestRag: "Retrieval-Augmented Generation",
+        interestRl: "Reinforcement Learning & Factuality",
+        publicationsTitle: "Selected Publications",
+        modelsTitle: "Model Work",
+        stepRole: "StepFun · Model contributor",
+        stepDetail: "A flagship foundation model for agentic work, long-horizon tool use, software engineering, and professional knowledge tasks.",
+        project: "Project",
+        ernie5Role: "ERNIE Team, Baidu · Contributing author",
+        ernie5Detail: "A unified autoregressive foundation model for multimodal understanding and generation across text, image, video, and audio.",
+        ernie45Role: "ERNIE Team, Baidu · Contributor",
+        ernie45Detail: "An open-source family of large-scale language and multimodal foundation models with dense and mixture-of-experts variants.",
+        report: "Report",
+        experienceTitle: "Experience & Education",
+        presentYears: "2026 - Present",
+        stepJob: "Foundation Model Researcher",
+        stepJobDetail: "Post-training for agentic models, StepFun",
+        researcher: "Researcher",
+        baiduJobDetail: "ERNIE Team, Baidu",
+        byteDanceJobDetail: "AI Lab, ByteDance Inc.",
+        undergraduate: "Undergraduate in Mathematics",
+        fudanDetail: "Class of 2015, Fudan University",
+        honorsTitle: "Honors",
+        junzheng: "Junzheng Scholar (莙政学者)",
+        xiyuan: "Xiyuan Scholar (曦源学者)",
+        fudan: "Fudan University",
+        undergradPeriod: "Undergraduate",
+        nationalScholarship: "National Scholarship",
+        ministry: "Ministry of Education, China",
+        noi: "NOI Silver Medal",
+        noiFull: "National Olympiad in Informatics",
+        apio: "APIO Silver Medal",
+        apioFull: "Asia-Pacific Informatics Olympiad, China Region",
+        writingTitle: "Science Fiction",
+        fiction2018: "Fiction / 2018",
+        fiction: "Fiction",
+        collisionDetail: "Published March 1, 2018 by Jiangsu Phoenix Literature and Art Publishing House in 《科幻故事空间站》.",
+        northDetail: "Science fiction published during my undergraduate years.",
+        contactTitle: "Contact",
+        contactText: "For research discussions and collaboration, feel free to get in touch."
+      },
+      zh: {
+        pageTitle: "王雨程 | 基座模型研究员",
+        description: "王雨程，阶跃星辰基座模型研究员，研究方向包括模型后训练、智能体和可靠的语言生成。",
+        name: "王雨程",
+        navAbout: "关于",
+        navResearch: "论文",
+        navModels: "模型",
+        navExperience: "经历",
+        navWriting: "创作",
+        intro: "我主要从事基座模型后训练与智能体能力研究，也关注语言模型如何获取、运用和表达知识。",
+        email: "邮箱",
+        aboutTitle: "关于我",
+        aboutText: "我目前在阶跃星辰从事基座模型研究，主要方向是智能体模型后训练。此前曾在百度文心团队和字节跳动 AI Lab 工作。我的研究兴趣包括智能体语言模型、强化学习、检索增强生成和可靠的长文本生成。本科就读于复旦大学数学专业，同时也进行科幻创作。",
+        interestPostTraining: "基座模型后训练",
+        interestAgents: "智能体语言模型",
+        interestRag: "检索增强生成",
+        interestRl: "强化学习与事实性",
+        publicationsTitle: "代表论文",
+        modelsTitle: "模型工作",
+        stepRole: "阶跃星辰 · 模型研发成员",
+        stepDetail: "面向智能体任务的旗舰基座模型，重点覆盖长程工具使用、软件工程和专业知识工作。",
+        project: "项目主页",
+        ernie5Role: "百度文心团队 · 技术报告作者",
+        ernie5Detail: "统一的自回归基座模型，支持文本、图像、视频和音频的多模态理解与生成。",
+        ernie45Role: "百度文心团队 · 模型研发成员",
+        ernie45Detail: "包含稠密模型与混合专家模型的大规模语言及多模态基座模型系列。",
+        report: "技术报告",
+        experienceTitle: "工作与教育经历",
+        presentYears: "2026 至今",
+        stepJob: "基座模型研究员",
+        stepJobDetail: "阶跃星辰，智能体模型后训练",
+        researcher: "研究员",
+        baiduJobDetail: "百度文心团队",
+        byteDanceJobDetail: "字节跳动 AI Lab",
+        undergraduate: "数学专业本科生",
+        fudanDetail: "复旦大学，2015级",
+        honorsTitle: "荣誉与奖项",
+        junzheng: "莙政学者",
+        xiyuan: "曦源学者",
+        fudan: "复旦大学",
+        undergradPeriod: "本科期间",
+        nationalScholarship: "国家奖学金",
+        ministry: "中华人民共和国教育部",
+        noi: "全国信息学奥林匹克竞赛银牌",
+        noiFull: "NOI 2014",
+        apio: "亚太信息学竞赛中国赛区银牌",
+        apioFull: "APIO 2014",
+        writingTitle: "科幻创作",
+        fiction2018: "科幻 / 2018",
+        fiction: "科幻",
+        collisionDetail: "2018年3月1日出版，收录于江苏凤凰文艺出版社《科幻故事空间站》。",
+        northDetail: "本科期间发表的科幻小说。",
+        contactTitle: "联系方式",
+        contactText: "欢迎就研究与合作事宜与我联系。"
+      }
+    };
+
+    function setLanguage(lang) {
+      const selected = translations[lang] ? lang : "en";
+      const copy = translations[selected];
+      document.documentElement.lang = selected === "zh" ? "zh-CN" : "en";
+      document.title = copy.pageTitle;
+      document.querySelector('meta[name="description"]').content = copy.description;
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const value = copy[element.dataset.i18n];
+        if (value) element.textContent = value;
+      });
+      document.querySelectorAll("[data-set-lang]").forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.setLang === selected));
+      });
+      try { localStorage.setItem("homepage-language", selected); } catch (_) {}
+    }
+
+    document.querySelectorAll("[data-set-lang]").forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.setLang));
+    });
+
+    let initialLanguage = "en";
+    try {
+      initialLanguage = localStorage.getItem("homepage-language") || (navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en");
+    } catch (_) {
+      initialLanguage = navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en";
+    }
+    setLanguage(initialLanguage);
+  </script>
 </body>
 </html>
