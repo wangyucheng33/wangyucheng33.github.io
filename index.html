@@ -284,12 +284,25 @@
       font-size: 14px;
     }
 
+    .interest-group {
+      margin-top: 14px;
+    }
+
+    .interest-heading {
+      margin: 0 0 6px;
+      color: #444;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
     .interests {
       display: flex;
       flex-wrap: wrap;
       gap: 6px 20px;
-      margin-top: 0;
+      margin: 0;
+      padding: 0;
       border: 0;
+      list-style: none;
     }
 
     .interest {
@@ -582,7 +595,7 @@
       <div class="hero-inner">
         <div>
           <h1 id="page-title" data-i18n="name">Yucheng Wang</h1>
-          <p class="intro" data-i18n="intro">I help improve coding agent capabilities at StepFun, learning from my teammates and lending a hand where I can.</p>
+          <p class="intro" data-i18n="intro">WYC's personal homepage</p>
           <div class="profile-links" aria-label="Profile links">
             <a href="https://openreview.net/profile?id=~Yucheng_Wang12" target="_blank" rel="noreferrer">OpenReview</a>
             <a href="https://github.com/wangyucheng33" target="_blank" rel="noreferrer">GitHub</a>
@@ -599,15 +612,37 @@
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="section-label"><h2 id="about-title" data-i18n="aboutTitle">About</h2></div>
       <div>
-        <p class="about-copy" data-i18n="aboutText">Previously, I worked on DeepQA, a search-engine-based question answering project, at ByteDance AI Lab, and later focused on retrieval-augmented generation (RAG) and knowledge-focused post-training on Baidu's ERNIE team. I attended Fudan University, transferring from Computer Science to Mathematics in 2016. I have also written science fiction.</p>
         <p class="personal-note" data-i18n="ioerNote">Former IOer (retired, now completely replaced by AI).</p>
-        <div class="interests" aria-label="Research interests"><div class="interest" data-i18n="interestPostTraining">Foundation Model Post-training</div><div class="interest" data-i18n="interestAgents">Agentic Language Models</div><div class="interest" data-i18n="interestRag">Retrieval-Augmented Generation</div><div class="interest" data-i18n="interestRl">Reinforcement Learning &amp; Factuality</div></div>
+        <p class="about-copy" data-i18n="aboutText">I currently work on coding agent capabilities at StepFun, doing odd jobs for the pros. Previously, I focused on retrieval-augmented generation (RAG) and knowledge-focused post-training on Baidu's ERNIE team, and worked on DeepQA, a search-engine-based question answering project, at ByteDance AI Lab.</p>
+        <p class="about-copy" data-i18n="aboutEducation">I attended Fudan University, transferring from Computer Science to Mathematics in 2016. I have also written science fiction.</p>
+        <div class="interest-group">
+          <h3 class="interest-heading" id="research-interests-title" data-i18n="researchInterestsTitle">Research interests</h3>
+          <ul class="interests" aria-labelledby="research-interests-title">
+            <li class="interest" data-i18n="interestPostTraining">Foundation Model Post-training</li>
+            <li class="interest" data-i18n="interestAgents">Agentic Language Models</li>
+            <li class="interest" data-i18n="interestRag">Retrieval-Augmented Generation</li>
+            <li class="interest" data-i18n="interestRl">Reinforcement Learning &amp; Factuality</li>
+            <li class="interest" data-i18n="interestCodingAgents">Coding Agents</li>
+          </ul>
+        </div>
+        <div class="interest-group">
+          <h3 class="interest-heading" id="personal-interests-title" data-i18n="personalInterestsTitle">Personal interests</h3>
+          <ul class="interests" aria-labelledby="personal-interests-title">
+            <li class="interest" data-i18n="interestSwimming">Swimming</li>
+            <li class="interest" data-i18n="interestPainting">Painting</li>
+            <li class="interest" data-i18n="interestBadminton">Badminton</li>
+            <li class="interest" data-i18n="interestDota">DOTA</li>
+            <li class="interest" data-i18n="interestAutoChess">Auto Chess</li>
+            <li class="interest" data-i18n="interestGenshin">Genshin Impact</li>
+            <li class="interest" data-i18n="interestHonorOfKings">Honor of Kings</li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="section" id="experience" aria-labelledby="experience-title">
       <div class="section-label"><h2 id="experience-title" data-i18n="experienceTitle">Experience &amp; Education</h2></div>
       <div class="timeline">
-        <article class="timeline-item"><div class="timeline-year" data-i18n="presentYears">2026 - Present</div><div><h3 data-i18n="stepJob">R&amp;D</h3><p data-i18n="stepJobDetail">StepFun · Helping improve coding agent capabilities, learning from the team and contributing where I can.</p></div></article>
+        <article class="timeline-item"><div class="timeline-year" data-i18n="presentYears">2026 - Present</div><div><h3 data-i18n="stepJob">R&amp;D</h3><p data-i18n="stepJobDetail">StepFun · Coding agent capabilities; doing odd jobs for the pros.</p></div></article>
         <article class="timeline-item"><div class="timeline-year">2023 - 2026</div><div><h3 data-i18n="researcher">Researcher</h3><p data-i18n="baiduJobDetail">ERNIE Team, Baidu · Retrieval-augmented generation (RAG) and knowledge-focused post-training.</p></div></article>
         <article class="timeline-item"><div class="timeline-year">2020 - 2022</div><div><h3 data-i18n="byteDanceJob">R&amp;D</h3><p data-i18n="byteDanceJobDetail">ByteDance AI Lab · DeepQA, a search-engine-based question answering project.</p></div></article>
         <article class="timeline-item"><div class="timeline-year">2015 - 2020</div><div><h3 data-i18n="undergraduate">Undergraduate in Mathematics</h3><p data-i18n="fudanDetail">Fudan University, entering class of 2015 · Transferred from Computer Science to Mathematics in 2016.</p></div></article>
@@ -665,15 +700,26 @@
         navModels: "Models",
         navExperience: "Experience",
         navWriting: "Writing",
-        intro: "I help improve coding agent capabilities at StepFun, learning from my teammates and lending a hand where I can.",
+        intro: "WYC's personal homepage",
         email: "Email",
         aboutTitle: "About",
-        aboutText: "Previously, I worked on DeepQA, a search-engine-based question answering project, at ByteDance AI Lab, and later focused on retrieval-augmented generation (RAG) and knowledge-focused post-training on Baidu's ERNIE team. I attended Fudan University, transferring from Computer Science to Mathematics in 2016. I have also written science fiction.",
+        aboutText: "I currently work on coding agent capabilities at StepFun, doing odd jobs for the pros. Previously, I focused on retrieval-augmented generation (RAG) and knowledge-focused post-training on Baidu's ERNIE team, and worked on DeepQA, a search-engine-based question answering project, at ByteDance AI Lab.",
+        aboutEducation: "I attended Fudan University, transferring from Computer Science to Mathematics in 2016. I have also written science fiction.",
         ioerNote: "Former IOer (retired, now completely replaced by AI).",
+        researchInterestsTitle: "Research interests",
+        personalInterestsTitle: "Personal interests",
         interestPostTraining: "Foundation Model Post-training",
         interestAgents: "Agentic Language Models",
         interestRag: "Retrieval-Augmented Generation",
         interestRl: "Reinforcement Learning & Factuality",
+        interestCodingAgents: "Coding Agents",
+        interestSwimming: "Swimming",
+        interestPainting: "Painting",
+        interestBadminton: "Badminton",
+        interestDota: "DOTA",
+        interestAutoChess: "Auto Chess",
+        interestGenshin: "Genshin Impact",
+        interestHonorOfKings: "Honor of Kings",
         publicationsTitle: "Selected Publications",
         modelsTitle: "Model Work",
         stepRole: "StepFun · Model contributor",
@@ -687,7 +733,7 @@
         experienceTitle: "Experience & Education",
         presentYears: "2026 - Present",
         stepJob: "R&D",
-        stepJobDetail: "StepFun · Helping improve coding agent capabilities, learning from the team and contributing where I can.",
+        stepJobDetail: "StepFun · Coding agent capabilities; doing odd jobs for the pros.",
         researcher: "Researcher",
         baiduJobDetail: "ERNIE Team, Baidu · Retrieval-augmented generation (RAG) and knowledge-focused post-training.",
         byteDanceJob: "R&D",
@@ -724,15 +770,26 @@
         navModels: "模型",
         navExperience: "经历",
         navWriting: "创作",
-        intro: "我目前在阶跃星辰参与 coding agent 能力提升，跟着团队同事学习、打下手。",
+        intro: "WYC的个人主页",
         email: "邮箱",
         aboutTitle: "关于我",
-        aboutText: "此前在字节跳动 AI Lab 参与基于搜索引擎的 DeepQA 问答项目，之后在百度文心团队主要做检索增强生成（RAG）与知识类后训练。本科就读于复旦大学，2016 年从计算机系转到数学系，也写过一些科幻小说。",
+        aboutText: "目前在阶跃星辰做 coding agent 能力提升，给大佬们打杂。此前在百度文心团队主要做检索增强生成（RAG）与知识类后训练，在字节跳动 AI Lab 参与基于搜索引擎的 DeepQA 问答项目。",
+        aboutEducation: "本科就读于复旦大学，2016 年从计算机系转到数学系，也写过一些科幻小说。",
         ioerNote: "前 IOer（退役选手，现已完全被 AI 取代）。",
+        researchInterestsTitle: "研究兴趣",
+        personalInterestsTitle: "生活兴趣",
         interestPostTraining: "基座模型后训练",
         interestAgents: "智能体语言模型",
         interestRag: "检索增强生成",
         interestRl: "强化学习与事实性",
+        interestCodingAgents: "coding agents",
+        interestSwimming: "游泳",
+        interestPainting: "绘画",
+        interestBadminton: "羽毛球",
+        interestDota: "DOTA",
+        interestAutoChess: "自走棋",
+        interestGenshin: "原神",
+        interestHonorOfKings: "王者荣耀",
         publicationsTitle: "代表论文",
         modelsTitle: "模型工作",
         stepRole: "阶跃星辰 · 模型研发成员",
@@ -746,7 +803,7 @@
         experienceTitle: "工作与教育经历",
         presentYears: "2026 至今",
         stepJob: "R&D",
-        stepJobDetail: "阶跃星辰 · 参与 coding agent 能力提升，跟着团队同事学习、打下手。",
+        stepJobDetail: "阶跃星辰 · coding agent 能力提升，给大佬们打杂。",
         researcher: "研究员",
         baiduJobDetail: "百度文心团队 · 主要从事检索增强生成（RAG）与知识类后训练。",
         byteDanceJob: "R&D",
